@@ -18,19 +18,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            NoteKeeperTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    val navController = rememberNavController()
-                    val container = (LocalContext.current.applicationContext as NoteKeeperApp).container
-                    NoteKeeperNavHost(
-                        appContainer = container,
-                        navController = navController
-                    )
-                }
-            }
+            val navController = rememberNavController()
+            val appComponent = (LocalContext.current.applicationContext as NoteKeeperApp).component
+            NoteKeeperNavHost(
+                appComponent = appComponent,
+                navController = navController
+            )
         }
     }
 }
