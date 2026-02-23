@@ -11,7 +11,7 @@ import javax.inject.Inject
 /**
  * TODO("Add documentation")
  */
-class NotesRepositoryImpl @Inject constructor(
+internal class NotesRepositoryImpl @Inject constructor(
     private val noteDao: NoteDao,
     private val noteMapper: DataNoteMapper
 ): NotesRepository {

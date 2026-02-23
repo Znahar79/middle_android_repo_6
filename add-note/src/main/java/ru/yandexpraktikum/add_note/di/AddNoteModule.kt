@@ -10,7 +10,7 @@ import javax.inject.Scope
 
 @Module
 @InstallIn(ViewModelComponent::class)
-interface AddNoteModule {
+internal interface AddNoteModule {
     @Binds
     fun bindAddNoteUsecase(impl: AddNoteInteractorImpl): AddNoteInteractor
 }

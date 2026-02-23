@@ -12,7 +12,7 @@ import javax.inject.Scope
 
 @Module
 @InstallIn(ViewModelComponent::class)
-interface AllNotesModule {
+internal interface AllNotesModule {
     @Binds
     fun bindFetchAllNotesUsecase(impl: FetchAllNotesInteractorImpl): FetchAllNotesInteractor
 
