@@ -23,18 +23,16 @@ fun NoteKeeperNavHost(navController: NavHostController) {
         startDestination = Screen.AllNotes.route
     ) {
         composable(route = Screen.AllNotes.route) {
-            val vm: AllNotesViewModel = hiltViewModel()
             AllNotesScreen(
-                viewModel = vm,
+                viewModel = hiltViewModel(),
                 onAddNoteClick = {
                     navController.navigate(Screen.AddNote.route)
                 }
             )
         }
         composable(route = Screen.AddNote.route) {
-            val vm: AddNoteViewModel = hiltViewModel()
             AddNoteScreen(
-                viewModel = vm,
+                viewModel = hiltViewModel(),
                 onBackClick = {
                     navController.popBackStack()
                 }

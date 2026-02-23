@@ -41,8 +41,6 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
-    //implementation(libs.dagger)
-    //kapt(libs.dagger.compiler)
     implementation(libs.hilt.android)
     implementation(libs.hilt.navigation.compose)
     kapt(libs.hilt.compiler)
